@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio Website</title>
+	 <meta charset="utf-8">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style type="text/css">
+    	body{
+    		line-height:1.4;
+    		font:400 15px 'Roboto', sans-serif;
+    		letter-spacing: 0.5px;
+    		color:#333;
+    	}
+    	a{
+    		outline: none;
+    	}
+    	.bg-header{
+    		background:url(img.jpg) no-repeat fixed;
+    		background-size: cover;
+    		min-height:630px;
+    		position:relative;
+    	}
+    	.header-bg-gray{
+              background-color: rgba(0,0,0,0.67);
+              min-height: 650px;
+    	}
+    	.container-fluid{
+    		padding: 0;
+    	}
+    	.navbar{
+    		padding: 3px 16px;
+    	}
+    	.navbar .navbar-nav .active{
+    		font-size: 18px;
+    		font-weight: 600px;
+    	}
+    	.navbar-nav>li>a{
+    		font-size: 14px;
+    		font-weight: 400;
+    		color:#FFF;
+    		outline:none;
+    	}
+    	.active{
+    		opacity: 1;
+    	} 
+       .navbar-nav .nav-item .nav-link{
+       	transition: 0.3s ease;
+       }
+       .navbar-nav .nav-item .nav-link:hover{
+       	transition: 0.3s ease;
+       	font-size: 18px;
+       }
+       .navbar-dark .navbar-toggler:hover,V .navbar-dark .navbar-toggler:active{
+           background-color: rgba(255,255,255,0.2);
+           transition: 0.3s ease;
+       }
+       button:focus{
+       	outline: none;
+       	background-color: rgba(255,255,255,0.1);
+       }
+       .banner-text{
+       	border-left: 5px solid #BE2525;
+       	padding: 15px 40px;
+       	color:#FFF;
+       	margin-top:170px; 
+       }
+       .banner-text h2, .banner-text p{
+       	   font:400 40px 'Questrial', sans-serif;
+       }
+       .banner-text p{
+       	line-height: 1.4;
+       }
+       .decorate{
+       	font-family: 'Satisfy',cursive;
+       }
+       .scroll-to-about a i{
+       	text-align: center;
+       	position: absolute;
+       	bottom: -140px;
+       	font-size: 24px;
+       	color:#FFF;
+       	width: 40px;
+       	height:40px;
+       	border: 1px solid #FFF;
+       	line-height:40px;
+       	border-radius: 50%;
+       }
+       /*About*/
+       .section-padding{
+       	 padding: 60px 0px;
+       }
+       #about{
+       	 background: url(img1.jpg) no-repeat;
+       	 background-size: cover;
+       	 margin-bottom: -3px;
+       }
+       .title-text{
+       	padding: 0 25px 0 0;
+       	border-right :5px solid #BE2525;
+       	font-size: 35px;
+       }
+       .title-text p{
+       	color:#444;
+       	font-size: 40px;
+       }
+
+        /*Portfolio*/
+        #port{
+        	padding:0px 10px 20px 10px;
+        	margin-bottom: -1px;
+        	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+        }
+        .portfolio-padding{
+        	background: url(img1.jpg) no-repeat;
+       	    background-size: cover;
+       	    margin-bottom: -3px;
+        }
+        /*Testimonial*/
+        .padding {
+     padding: 5rem
+ }
+
+ .card {
+     position: relative;
+     display: flex;
+     width: 600px;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid #d2d2dc;
+     border-radius: 11px;
+     -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+     -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+     box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+ }
+  .card .card-body {
+     padding: 1rem 1rem
+ }
+
+ .card-body {
+     flex: 1 1 auto;
+     padding: 1.25rem
+ }
+
+ .card-text {
+     font-size: 0.875rem;
+     margin-bottom: .5rem;
+     line-height: 1.5rem
+ }
+
+ h4 {
+     line-height: .2 !important
+ }
+
+ .items {
+     width: 90%;
+     margin: 0px auto;
+     margin-top: 100px
+ }
+ .slick-slide {
+     margin: 10px
+ }
+
+ .media iframe,
+ .media-content {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     border: 0;
+     border-radius: inherit;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     background-color: rgba(120, 120, 120, .1);
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center
+ }
+ .media-content:before {
+     content: '';
+     position: absolute;
+     height: 10%;
+     width: 90%;
+     left: 5%;
+     bottom: 0;
+     background: inherit;
+     background-position-y: 100%;
+     filter: blur(10px)
+ }
+
+ .circle .media-content:before {
+     width: 40%;
+     left: 30%
+ }
+
+ .profile-image {
+     width: 100%;
+     height: 200px;
+     border-top-left-radius: 11px !important;
+     border-top-right-radius: 11px
+ }
+  .card-title {
+     font-size: 19px;
+     font-weight: 200
+ }
+/* Admin*/
+   .rounded-circle{
+    height: 200px;
+    width: 200px;
+    border: 2px solid yellow;
+}
+.list-inline-item{
+    background-color: rgb(212, 183, 16);
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 60%;
+    font-size: 15px;
+    padding:5px;
+}
+/*About members*/
+#back{
+	background: url(https://i.pinimg.com/originals/10/ad/5a/10ad5a61469c0428c4701c602e8839e6.jpg) no-repeat;
+       	 background-size: cover;
+	     color:white;
+	     padding: 10px;
+}
+#admin-text{
+	padding:10px;
+}
+.heading{
+    font-size: 30px;
+    padding-top: 30px;
+    text-shadow: 2px 2px #800000;
+}
+/*contact*/
+ #basic-contact{
+ 	padding:70px;
+ 	margin:auto;
+ 	background-color: #191970;
+ 	color:white;
+ }
+ #basic-contact a{
+ 	color:white;
+ }
+</style>
+</head>
+<body id="my-portfolio" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <header class="container-fluid bg-header" id="home">
+  	<div class="header-bg-gray">
+  		<nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top" id="my-navbar">
+  			<a href="#home" class="navbar-brand"><img src="logoNethuts.png" style="height:35px;"></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"aria-label="Toggle navigation">
+  				<span class="navbar-toggler-icon"></span>	
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbar-content">
+  				<ul class="navbar-nav ml-auto">
+  					<li class="nav-item">
+  						<a href="#home" class="nav-link">Home</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#about" class="nav-link">About</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#Portfolio" class="nav-link">Portfolio</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#testimonial" class="nav-link">Testimonial</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#contact" class="nav-link">Contact</a>
+  					</li>
+  				</ul>
+  		</nav>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-12">
+  					<div class="banner-text">
+  						<h2>Hi, This is <span class="decorate">Portfolio </span>Website,</h2>
+  						<p>A Creative Developer<br>&amp; Designer</p>
+  					</div>
+  					<div class="scroll-to-about text-center"><a href="#about"><i class="fa fa-angle-down"></i></a>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </header>
+
+
+    <section id="about" class="section-padding">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6 text-right">
+    				<h2 class="title-text">About <br><span class="decorate"></span>Nethuts Solution Inc.</h2>
+    			</div>
+    			<div class="col-md-6 text-left">
+    				<div class="about-text">
+    					<p><b>Nethuts Solution Inc. founded in 2016 is india based Web Development and Digital Marketing company having its main focus towards cliient servicing through knowledge based solutions. Core Services include Web & Software Development, Digital Marketing.</b></p><br/><br/><br/><br/><br/><hr/><hr/>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	
+    </section>
+    <section id="Portfolio" class="portfolio-padding">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12" id="port">
+    				<div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+           
+                    </ul>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="img2.jpg" alt="Los Angeles" width="1100" height="500">  
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img3.jpg" alt="Chicago" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img5.jpg" alt="New York" width="1100" height="500">  
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    </a>
+                    </div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+        <section id="testimonial">
+       <div class="items">
+    <div class="card">
+        <div class="media media-2x1 gd-primary"> <img class="profile-image" src="https://i.pinimg.com/736x/63/f9/3a/63f93ab0e6c023cf837c2be7fee732d6.jpg"> </div>
+        <div class="card-body">
+            <h5 class="card-title">Delbert Simonas</h5>
+            <p class="card-text">"Online reviews can make or break a customer's decision to make a purchase. Read about these customer review on site"</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="media media-2x1 gd-primary"> <img class="profile-image" src="https://i.pinimg.com/originals/15/98/09/159809512c59264776cc71c8cf94ff58.jpg"> </div>
+        <div class="card-body">
+            <h5 class="card-title">Tikoh Amin</h5>
+            <p class="card-text">"When you think of Apple you automatically think expensive if your anything like me. When purchasing this laptop I was skeptical."</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="media media-2x1 gd-primary"> <img class="profile-image" src="https://cutewallpaper.org/21/barbi-download/Cute-Barbie-Wallpaper-Barbi-Doll-Images-Download-Free-.jpg"> </div>
+        <div class="card-body">
+            <h5 class="card-title">Malachi Lensing</h5>
+            <p class="card-text">"I’ve wanted a MacBook for a while now because of the build quality and the simplicity of the OS. I spend an average 6 hours a day."</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="media media-2x1 gd-primary"> <img class="profile-image" src="https://i.pinimg.com/736x/e3/c2/f9/e3c2f94ff7b7ef6ee5464905063f10b0.jpg"> </div>
+        <div class="card-body">
+            <h5 class="card-title">Christian Isla</h5>
+            <p class="card-text">"This MacBook has excellent processing speed. The screen is crystal clear and I really enjoy the touchbar. I set it up"</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="media media-2x1 gd-primary"> <img class="profile-image" src="https://bestprofilepix.com/wp-content/uploads/2014/03/lovely-barbies-girls-facebook-profile-pictures.jpg"> </div>
+        <div class="card-body">
+            <h5 class="card-title">Lori Charles</h5>
+            <p class="card-text">"For the last 10 years, I have owned an old Gateway laptop. Although it was amazing and lasted me, it was time for an upgrade."</p>
+            </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="back">
+	        <div class="row text-center">
+	        	<div class="col-md-12 text-center">
+	        		<h1 class="heading">OUR AMAZING TEAM</h1>
+	        		 <p class="text-muted">With Creative Ideas</p>
+	        	</div>
+	        </div>
+	        	<div class="row text-center">
+		           <div class="col-md-6">
+                    <div class="team-member">
+                       <img class="mx-auto rounded-circle" src="https://wallpapercave.com/wp/wp3411518.jpg"/>
+                       <h4 id="admin-text">Barbie Doll</h4>
+                       <p class="text-muted">Developer || Designer</p>
+                    
+                       <ul class="list-inline social-buttons"> 
+                       <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                       <li class="list-inline-item"><a href="#"> <i class="fa fa-facebook-f"></i></a></li>
+                       <li class="list-inline-item"><a href="#"> <i class="fa fa-linkedin"></i> </a></li>                      
+                       </ul>       
+                        
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="team-member">
+                       <img class="mx-auto rounded-circle" src="https://i.pinimg.com/originals/59/df/50/59df508f24bdd54108004b91f1758edd.jpg"/>
+                       <h4 id="admin-text">Barbie Doll</h4>
+                       <p class="text-muted">Developer || Designer</p>
+                    
+                       <ul class="list-inline social-buttons"> 
+                       <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                       <li class="list-inline-item"><a href="#"> <i class="fa fa-facebook-f"></i></a></li>
+                       <li class="list-inline-item"><a href="#"> <i class="fa fa-linkedin"></i> </a></li>                      
+                       </ul>       
+                        
+                    </div>
+                </div>
+	         </div>
+         </div>
+     </section>
+              <section id="contact">
+ 	           <div class="container-fluid" id="basic-contact">
+ 	 	        <div class="row">
+ 	 		     <div class="col-md-6">
+ 	 			  <h3><b><u>Contact Us</u></b></h3><br/><br/>
+ 	 			  <p><i class="fa fa-map-marker" style="font-size:30px"></i>Address</p>
+ 	 			  <p>Office Location: N-199/A</p>
+ 	 			  <p>Mudiali Road, kolkata-700024</p>
+ 	 			  <p>Nethuts Solution Inc | <a href="www.nethuts.in">www.nethuts.in</a></p>
+ 	 			  <p>Mob- +91 9883003442</p>
+ 	 		    </div>
+ 	 		    <div class="col-md-6"> 
+ 	 		   <form>
+               <br/><div class="form-group">
+               <label for="exampleFormControlInput1">Email address</label>
+               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+               </div><br/><br/>
+               
+               <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>	            
+           </div>
+       </div>
+    </div>
+</section>
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+$('.items').slick({
+dots: true,
+infinite: true,
+speed: 800,
+autoplay: true,
+autoplaySpeed: 2000,
+slidesToShow: 4,
+slidesToScroll: 4,
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 3,
+infinite: true,
+dots: true
+}
+},
+{
+breakpoint: 600,
+settings: {
+slidesToShow: 2,
+slidesToScroll: 2
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+
+]
+});
+});
+</script>
+</body>
+</html>
